@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* Element Selector */
+        div {
+            background-color: pink;
+        }
+
+        /* Class Selector */
+        .divClass {
+            background-color: yellow;
+        }
+
+        /* ID Selector */
+        #divID {
+            background-color: green;
+        }
+
+        /* Universal Selector */
+        * {
+            font-family: 'Comic Sans MS';
+        }
+
+        /* Comma / Group */
+        h1,
+        p,
+        .divClass,
+        #divID {
+            text-decoration: underline;
+        }
+
+        /* Descendent Selector */
+        #divID p {
+            background-color: black;
+        }
+
+        /* Child Selector */
+        #divID>p {
+            background-color: purple;
+        }
+
+        /* Adjacent Sibling Selector */
+        #divID+p {
+            background-color: aqua;
+        }
+
+        /* General Sibling Selector */
+        #divID~p {
+            background-color: aqua;
+        }
+
+        #customHeading {
+            color: brown;
+        }
+
+        #customHeading:hover {
+            background-color: red;
+        }
+
+        a:link {
+            background-color: blue;
+        }
+
+        /* unvisited */
+        a {
+            background-color: pink;
+        }
+
+        /* visited */
+        a:visited {
+            background-color: aqua;
+        }
+
+        /* hover */
+        a:hover {
+            background-color: yellow;
+        }
+
+        /* active */
+        a:active {
+            background-color: gray;
+        }
+
+        input:disabled {
+            border: 10px solid red;
+        }
+
+        #specialPara::first-letter {
+            font-size: 50px;
+            font-family: 'Verdana';
+        }
+
+        #specialPara::first-line {
+            font-size: 50px;
+            font-family: 'Verdana';
+        }
+    </style>
+</head>
+
+<body>
+    <p id="specialPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est
+        repellat sed
+        tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+        earum nihil non velit.</p>
+    <a href="http://www.google.com/login/">Click here</a>
+    <input type="text">
+    <input type="checkbox" checked>
+    <section id="container">
+        <div>
+            <h1 id="customHeading">Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+        </div>
+        <div class="divClass" id="divID">
+            <h1>Heading</h1>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti aliquam facere, ad officiis, earum
+                    laboriosam molestias id voluptas fugit quod doloribus minima nostrum! Ab commodi voluptatem fugiat
+                    quos iste saepe?</p>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+        </div>
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eligendi harum officiis iure amet error
+            magni accusantium maiores ab officia cumque beatae, libero quod ea. Inventore neque magni sit nostrum?</p>
+        <div class="divClass">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+        </div>
+        <div class="divClass">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem! Quam est repellat sed
+                tempora placeat quis reiciendis totam, aliquam, deserunt voluptatem corporis tenetur inventore iusto
+                earum nihil non velit.</p>
+        </div>
+    </section>
+</body>
+
+</html>
