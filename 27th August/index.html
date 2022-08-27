@@ -7,15 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #loading,
-        #content {
-            display: none;
-        }
+
     </style>
 </head>
 
 <body>
-    <p id="loading">Loading...</p>
+    <p id="status"></p>
     <p id="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, mollitia? Quibusdam suscipit</p>
 
     <script>
@@ -74,6 +71,23 @@
             else {
                 console.log("More Tax");
             }
+        }
+
+        // Switch Case
+        switch (salary) {
+            case 10000: tax = 10; break;
+            case 20000: tax = 19; city = "Chennai"; break;
+            case 30000: tax = 20; break;
+            default: tax = 5;
+        }
+
+        let currentStatus = "Morninwefg";
+
+        switch (currentStatus) {
+            case ("Morning"): document.getElementById("status").innerHTML = "Morning"; break;
+            case ("Afternoon"): document.getElementById("status").innerHTML = "Afternoon"; break;
+            case ("Evening"): document.getElementById("status").innerHTML = "Evening"; break;
+            default: document.getElementById("status").innerHTML = "Hello!";
         }
 
     </script>
