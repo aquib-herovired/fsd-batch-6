@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #loading,
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="loading">Loading...</p>
+    <p id="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, mollitia? Quibusdam suscipit</p>
+
+    <script>
+        let isLoading = document.getElementById("loading");
+        let isContent = document.getElementById("content");
+        let isPageLoaded = true;
+
+        let salary = 10000;
+        let tax = 1;
+
+        let city = "Chennai";
+
+        //Ternary Operator
+        isPageLoaded ? isContent.style.display = "block" : isLoading.style.display = "block";
+
+        // If-Else
+        if (isLoading == true) {
+            isContent.style.display = "block";
+        }
+        else {
+            isLoading.style.display = "block"
+        }
+
+        if (!(salary > 50000)) {
+            console.log(salary);
+        }
+
+        // Else If Ladder
+        // AND, OR, NOT
+        if (salary > 50000 && city == "Chennai") {
+            tax = 20;
+        }
+        else if (salary > 40000 || city == "Chennai") {
+            tax = 18;
+        }
+        else if (salary > 30000) {
+            tax = 15;
+        }
+        else {
+            tax = 10;
+        }
+
+        // Nested If
+        if (salary > 50000) {
+            if (tax > 10) {
+                console.log("Tax");
+            }
+            else {
+                console.log("More Tax");
+            }
+        }
+        else {
+            if (tax > 10) {
+                console.log("Tax");
+            }
+            else {
+                console.log("More Tax");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
