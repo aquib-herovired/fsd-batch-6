@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="special"></p>
+    <ul id="list"></ul>
+    <script>
+        // Array
+        // let arrayName = ["John", "john@office.com", 45, 50000.00, "378973jhfek", "Nagpur", "M", "637963475", true];
+        // // Indexing
+        // console.log(arrayName[0]);
+        // // Size of the array
+        // console.log(arrayName.length);
+        // // Accessing the last element of the array without knowing its size
+        // console.log(arrayName[arrayName.length - 1]);
+        // // Modifying data
+        // arrayName[0] = "Kate";
+        // arrayName[arrayName.length] = "jbdk";
+        // arrayName.push(1234);
+        // console.log(arrayName);
+
+        // console.log(arrayName.pop());
+        // console.log(arrayName);
+
+        // delete arrayName[2];
+
+        // arrayName.splice(3, 0, "Oracle", "hef", "New");
+
+        // console.log(arrayName);
+        // console.log(typeof (arrayName[0]));
+        // arrayName[2] = null;
+        // // console.log(arrayName);
+        // document.getElementById("special").innerHTML = arrayName;
+
+
+        // function modifyItem(item) {
+        //     let tempList = document.getElementById("list");
+        //     let listItem = document.createElement("li");
+        //     listItem.innerHTML = item + " Rs./-";
+        //     tempList.appendChild(listItem);
+        // }
+
+        // arrayName.forEach(modifyItem);
+
+        // Object
+        // let employee = {
+        //     name: "Kate",
+        //     phone: "78073553",
+        //     email: "kate@hello.com",
+        //     payslips: [1000, 2000, 3000, 4000],
+        //     address: { city: "Chennai", state: "Tamil Nadu", pincode: "63598" }
+        // }
+
+        // console.log(employee["name"]);
+        // console.log(employee.name);
+        // console.log(employee.payslips[1]);
+        // console.log(employee.address.state);
+        // console.log(employee["address"].state);
+        // console.log(employee["address"]["state"]);
+
+        // employee.email = "kate@newemail.com";
+        // console.log(employee);
+
+        // employee.age = 50;
+        // console.log(employee.age);
+
+        // delete employee.age;
+        // console.log(employee);
+
+        let dummy = ["One", "Two"];
+        let dummy2 = [...dummy, "Three"];
+
+        let temp = {
+            key1: "Some value",
+            key2: "Some value 2"
+        }
+
+        // Shallow Copy
+        let temp2 = temp; //copy
+        temp2.key2 = "NEW";
+
+        console.log(temp);
+        console.log(temp2);
+
+        // Deep Copy
+        let temp3 = {
+            ...temp,
+        };
+        temp3.key2 = "NEW";
+        console.log(temp3);
+
+    </script>
+</body>
+
+</html>
