@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body {
+            background-color: pink;
+        } */
+
+        /* div {
+
+            height: 750px;
+            background-color: pink; */
+
+        /* height: 100px;
+            width: 100px;
+            background-color: red; */
+
+        /*
+            Position in CSS
+            -------------------
+            position: static;
+
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+
+            position: fixed;
+            bottom: 100px;
+            right: 100px;
+
+            position: relative;
+            bottom: 100px;
+
+            position: sticky;
+            top: 20px; */
+
+
+
+        /* 
+
+            Display : Flex
+            ----------------------
+            display: flex;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            
+            */
+
+        /* 
+        }
+
+        p {
+            max-width: 300px;
+            padding: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a id="homeLink" href="#">Home</a>
+                </li>
+                <li>
+                    <a id="aboutLink" href="about.html">About</a>
+                </li>
+                <li>
+                    <a id="contactLink" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <p id="paraPage">This is some content</p>
+    <!-- Document Object Model -->
+    <script>
+        let linkData = document.getElementById("paraPage");
+        linkData.innerHTML = "This is new content!";
+        linkData.setAttribute("class", "specialPara");
+    </script>
+</body>
+
+</html>
