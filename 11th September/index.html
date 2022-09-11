@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">Loading...</h1>
+    <script>
+
+        function fetchData(){
+            fetch("https://randomuser.me/api").then((response)=>{
+                console.log(response);
+                return response.json();
+            }).then((data)=>{
+                console.log(data);
+                document.getElementById("heading").innerHTML = "User Email : "+data.results[0].email;
+            })};
+        
+            fetchData();
+        // Application Programming Interface
+
+        // let jsonStudent = `{"results":[{"gender":"male","name":{"title":"Mr","first":"Wallace","last":"Rivera"},"location":{"street":{"number":7593,"name":"The Crescent"},"city":"Manchester","state":"Tyne and Wear","country":"United Kingdom","postcode":"KR65 0FJ","coordinates":{"latitude":"-7.3333","longitude":"-94.5534"},"timezone":{"offset":"-2:00","description":"Mid-Atlantic"}},"email":"wallace.rivera@example.com","login":{"uuid":"fc6cd8ee-8461-4f18-84f6-59036823db70","username":"yellowgoose422","password":"diving","salt":"GpAg7gIU","md5":"2401fe1739559caa678059638ed3cc5d","sha1":"9714eff4e7910da77d4b7ec9bbaa925f731a89ea","sha256":"3ba9f5d39ffc6a727434c07effb19ee055c400b882217c9d97b88697bae61b76"},"dob":{"date":"1977-05-05T09:43:48.947Z","age":45},"registered":{"date":"2002-09-16T17:10:30.411Z","age":19},"phone":"0121 432 8043","cell":"07724 100180","id":{"name":"NINO","value":"ZY 45 79 22 T"},"picture":{"large":"https://randomuser.me/api/portraits/men/24.jpg","medium":"https://randomuser.me/api/portraits/med/men/24.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/24.jpg"},"nat":"GB"}],"info":{"seed":"0845e4321f651ca5","results":1,"page":1,"version":"1.4"}}`;
+
+        // console.log(jsonStudent);
+
+        // let randomUser = JSON.parse(jsonStudent);
+
+        // console.log(randomUser.results[0].location.city);
+
+
+
+        // console.log(jsonStudent);
+        // console.log("Original JSON data : ");
+        // let studentObject = JSON.parse(jsonStudent); //JSON -> JS Object
+        // console.log(jsonStudent);
+
+        // console.log("Processed JSON data (JS Object) : ");
+        // console.log(studentObject);
+        // console.log("Converting JS Object back to JSON data : ");
+
+        // console.log(JSON.stringify(studentObject)); //JS Object ->JSON
+        
+        
+        // let student = {
+        //     name:"John",
+        //     age:25,
+        //     email:"john@hello.com"
+        // }
+
+        // console.log(student);
+
+        // SetInterval
+        // let count = 0;
+        // var loopDisplay = setInterval(loopData, 3000);
+
+        // function loopData() {
+        //     count = count + 1;
+        //     document.getElementById("heading").innerHTML = "Count : " + count;
+        //     console.log("Looped!" + count);
+        // }
+
+        // function stopLoad(){
+        //     clearInterval(loopDisplay);
+        // }
+
+        // SetTimeOut
+        
+        // console.log("Function not yet called");
+
+        // var sleepSecond = setTimeout(changeHeading, 5000);
+        // console.log("Function called");
+
+        // function stopLoad() {
+        //     clearTimeout(sleepSecond);
+        //     console.log("Loading stopped");
+        // }
+
+        // function changeHeading() {
+        //     var heading = document.getElementById("heading");
+        //     console.log("Element read!");
+        //     heading.innerHTML = "New Session";
+        //     console.log("Content modified!");
+        //     heading.style.backgroundColor = "pink";
+        //     console.log("Background changed!");
+        // }
+    </script>
+</body>
+
+</html>
