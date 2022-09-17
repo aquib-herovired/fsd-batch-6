@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter a book to search" id="bookTitle">
+    <button id="searchNow">Search Books</button>
+    <hr>
+    <section id="bookDisplay"></section>
+
+    <script>
+        let searchButton = document.getElementById("searchNow");
+        searchButton.addEventListener("click", function () {
+            let bookName = document.getElementById("bookTitle").value;
+            // console.log(bookName);
+            getBooks(bookName);
+        });
+
+        async function getBooks(bookName) {
+            const response = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName);
+            const data = await response.json();
+            // console.log(data);
+            // console.log(data.items);
+            data.items.forEach(function (book) {
+                createBookCard(book.volumeInfo.title, book.volumeInfo.authors);
+                // console.log(book.volumeInfo.title);
+                // console.log(book.volumeInfo.authors);
+            });
+        }
+
+        function createBookCard(title, authors) {
+            let bookSection = document.getElementById("bookDisplay");
+            bookSection.style.display = "flex";
+            bookSection.style.flexWrap = "wrap";
+
+            let newBook = document.createElement("div");
+            newBook.style.maxWidth = "400px";
+            newBook.style.border = "2px solid black";
+            newBook.style.margin = "20px";
+
+            let bookTitle = document.createElement("h1");
+            bookTitle.innerHTML = title;
+
+            let bookAuthors = document.createElement("h3");
+            bookAuthors.innerHTML = authors;
+
+            newBook.appendChild(bookTitle);
+            newBook.appendChild(bookAuthors);
+
+            bookSection.appendChild(newBook);
+        }
+
+    </script>
+
+    <script>
+
+        // let myPromise = new Promise(
+        //     function (success, failure) {
+        //         let validLogin = false;
+        //         if (validLogin) {
+        //             success("Welcome back!");
+        //         }
+        //         else {
+        //             failure("Invalid credentials");
+        //         }
+        //     }
+        // );
+
+        // myPromise.then(
+        //     function (value) {
+        //         console.log(value);
+        //     },
+        //     function (error) {
+        //         console.log(error);
+        //     }
+        // );
+
+        // async function displayDynamic() {
+        //     let myPromise = new Promise(
+        //         function (success) {
+        //             setTimeout(function () {
+        //                 success("The promise is fulfilled!");
+        //             }, 3000);
+        //         });
+        //     document.getElementById("heading").innerHTML = await myPromise;
+        // }
+
+        // displayDynamic();
+    </script>
+</body>
+
+</html>
